@@ -1,15 +1,60 @@
 @import url('reset.css');
 
 :root {
-    --sidebar-width: 20vw;
+    --sidebar-width: 18vw;
+    --border-radius: 6px;
+    --gradient: linear-gradient(45deg, var(--primary-5), var(--primary));
+    --bx-shd: 4px 4px 10px hsla(270, 98%, 37%, 0.05);
+    --primary: hsl(270, 98%, 37%);
+    --primary-1: hsl(269, 100%, 95%);
+    --primary-2: hsl(270, 97%, 85%);
+    --primary-3: hsl(270, 98%, 75%);
+    --primary-4: hsl(270, 98%, 65%);
+    --primary-5: hsl(270, 98%, 55%);
+    --primary-6: hsl(270, 98%, 45%);
+    --primary-7: hsl(270, 98%, 35%);
+    --primary-8: hsl(270, 98%, 25%);
+    --primary-9: hsl(270, 97%, 15%);
+    --primary-10: hsl(271, 100%, 5%);
+    --neutral-1: hsl(280, 12%, 97%);
+    --neutral-2: hsl(277, 11%, 90%);
+    --neutral-3: hsl(277, 10%, 75%);
+    --neutral-4: hsl(277, 10%, 65%);
+    --neutral-5: hsl(277, 10%, 55%);
+    --neutral-6: hsl(277, 10%, 45%);
+    --neutral-7: hsl(277, 10%, 35%);
+    --neutral-8: hsl(277, 10%, 25%);
+    --neutral-9: hsl(278, 11%, 15%);
+    --neutral-10: hsl(280, 12%, 5%);
+}
+
+* {
+    box-sizing: border-box;
+    transition: 100ms;
 }
 
 body {
-    background: gray;
+    background: var(--primary-1);
+    font-family: 'Roboto', sans-serif;
+    color: var(--primary-10);
 }
 
 ul {
     display: flex;
+}
+
+a {
+    text-decoration: none;
+}
+
+b {
+    font-weight: bold;
+}
+
+h1 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 /* Sidebar  */
@@ -19,7 +64,8 @@ ul {
     position: fixed;
     left: 0;
     height: 100%;
-    background: hsl(212, 84%, 43%);
+    background: var(--gradient);
+    color: var(--neutral-1);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -27,10 +73,52 @@ ul {
 
 #sidebar > div {
     display: flex;
+    flex-direction: column;
+}
+#sidebar #logo {
+    padding: 10px;
+    padding-top: 40px;
 }
 
-#sidebar div > ul {
-    flex-direction: column;
+#sidebar #logo h1 {
+    font-family: 'DM Serif Display', serif;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin: auto;
+    font-size: 4rem;
+}
+
+#sidebar #logo > * {
+    margin: auto;
+    margin-left: 10px;
+}
+
+#sidebar a {
+    color: var(--neutral-1);
+    font-weight: 500;
+    font-size: 1.25rem;
+    padding: 20px 0;
+    position: inherit;
+    width: 100%;
+    text-align: left;
+    outline: 0;
+    display: flex;
+}
+
+#sidebar a.current {
+    font-weight: 600;
+}
+
+#sidebar a:hover, #sidebar a.current {
+    background: var(--neutral-1);
+    color: var(--primary-7);
+}
+
+#sidebar a > i {
+    font-size: 1rem;
+    margin: auto;
+    margin-left: 20%;
+    margin-right: 10%;
 }
 
 /* Mainboard  */
@@ -45,8 +133,9 @@ ul {
 }
 
 #header {
-    background: white;
+    background: var(--neutral-1);
     padding: 20px 40px;
+    box-shadow: var(--bx-shd);
 }
 
 #profile #left-side {
@@ -55,8 +144,8 @@ ul {
     grid-template-areas: 
                         "avatar username"
                         "avatar stats";
-    column-gap: 10px;
-    
+    column-gap: 20px;
+    row-gap: 10px;
 }
 
 #left-side > *, #right-side > * {
@@ -66,23 +155,33 @@ ul {
 
 #left-side #avatar {
     grid-area: avatar;
-    background: red;
-    width: 50px;
-    height: 50px;
+    background: var(--neutral-2);
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
 }
 
 #left-side #username {
     grid-area: username;
     margin-left: 0;
+    font-weight: bold;
+    font-size: 1.75rem;
+    margin-bottom: 0px;
 }
 
 #left-side #stats {
+    margin-top: 0px;
     grid-area: stats;
+    font-weight: 400;
+}
+
+#left-side #stats b {
+    color: var(--primary);
 }
 
 #left-side #stats > ul {
     display: flex;
-    gap: 10px;
+    gap: 20px;
 }
 
 #right-side {
@@ -92,4 +191,102 @@ ul {
 #right-side > ul {
     gap: 10px;
     margin: auto;
+}
+
+#right-side a {
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 10px 15px;
+    background: var(--primary);
+    color: var(--neutral-1);
+    border-radius: var(--border-radius);
+    display: block;
+}
+
+#right-side a:hover {
+    background: var(--primary-8);
+}
+
+#right-side a > i {
+    margin-right: 10px;
+}
+
+/*Main content*/
+
+#main {
+    display: grid;
+    grid-template-columns: .7fr .3fr;
+    margin: 40px;
+    gap: 40px;
+}
+
+#item-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+#item-card {
+    overflow: hidden;
+    background: var(--neutral-1);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--border-radius);    
+    box-shadow: var(--bx-shd);
+}
+
+#item-card > * {
+    display: flex;
+}
+
+#item-card #image {
+    height: 200px;
+    background: var(--neutral-3);
+}
+
+#item-card #info {
+    flex-direction: column;
+    margin: 15px;
+    padding-left: 5px;;
+    gap: 10px;
+}
+
+#info #name {
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 130%;
+}
+
+#info #price {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+}
+
+#item-card #control {
+    display: none;
+}
+
+#right-panel {
+    display: grid;
+    grid-template-rows: max-content;
+    gap: 40px;
+}
+
+#right-panel #content-board {
+    background: var(--neutral-1);
+    padding: 20px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--bx-shd);
+}
+
+#right-panel #content-board ul {
+    display: flex;
+    flex-direction: column;
+}
+
+#right-panel #content-board ul > li {
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--neutral-2);
 }

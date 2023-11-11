@@ -4,24 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel = "stylesheet" href = "style.css">
     <script src="https://kit.fontawesome.com/78a65ac865.js" crossorigin="anonymous" defer></script>
 </head>
 <body>
     <div id = "sidebar">
-        <div id = "logo">Shop</div>
+        <div id = "logo"><h1>Shop</h1></div>
         <div id = "navbar">
-            <ul>
-                <li><a href = "#">Home</a></li>
-                <li><a href = "#">Profile</a></li>
-                <li><a href = "#">Items</a></li>
-            </ul>
-        </div>
+            <a href = "#" class = "current"><i class="fa-solid fa-store fa-fw"></i>Home</a>
+            <a href = "#"><i class="fa-solid fa-user fa-fw"></i>Profile</a>
+            <a href = "#"><i class="fa-solid fa-bag-shopping fa-fw"></i>Items</a>
+         </div>
         <div id = "support">
-            <ul>
-                <li><a href = "#">Settings</a></li>
-                <li><a href = "#">Support</a></li>
-            </ul>
+            <a href = "#"><i class="fa-solid fa-gear fa-fw"></i>Settings</a>
+            <a href = "#"><i class="fa-solid fa-headset fa-fw"></i>Support</a>
         </div>
     </div>
     <div id = "main-board">
@@ -29,7 +28,7 @@
             <div id = "profile">
                 <div id = "left-side">
                     <div id = "avatar"></div>
-                    <div id = "username">Admin</div>
+                    <div id = "username">Admin (@sillyadmin)</div>
                     <div id = "stats">
                         <ul>
                             <li><b>1.1M</b> Followers</li>
@@ -40,8 +39,8 @@
                 </div>
                 <div id = "right-side">
                     <ul>
-                        <li><a href = "#"><i class="fa-regular fa-bell"></i> Messages</a></li>
-                        <li><a href = "#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
+                        <li><a href = "#"><i class="fa-regular fa-bell"></i>Messages</a></li>
+                        <li><a href = "#"><i class="fa-solid fa-right-from-bracket"></i>Logout</a></li>
                     </ul>
                 </div>
             </div> 
@@ -50,78 +49,84 @@
             <div id = "left-panel">
                 <h1>Your items</h1>
                 <div id = "item-container">
-                    <div id = "item-card" title = "Item 1">
-                        <div id = "image"></div>
-                        <div id = "info">
-                            <div id = "name">Name</div>
-                            <div id = "price">30$</div>
-                            <div id = "stats">4.7(201) | 1.1k bought</div>
+                    <div id="item-card" title="Item 123">
+                        <div id="image"></div>
+                        <div id="info">
+                            <div id="name">Premium Blue Widget with Advanced Features</div>
+                            <div id="price">$25.99</div>
+                            <div id="stats">4.5(150) | 800 bought</div>
                         </div>
-                        <ul id = "control">
-                            <li><a href = "#"><i class="fa-regular fa-pen-to-square"></i></a></li>
-                            <li><a href = "#"><i class="fa-regular fa-trash-can"></i></a></li>
-                        </ul>
-                    </div>
-                    <div id = "item-card" title = "Item 2">
-                        <div id = "image"></div>
-                        <div id = "info">
-                            <div id = "name">Name</div>
-                            <div id = "price">30$</div>
-                            <div id = "stats">4.7(201) | 1.1k bought</div>
+                        <div id="control">
+                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="#"><i class="fa-regular fa-trash-can"></i></a>
                         </div>
-                        <ul id = "control">
-                            <li><a href = "#"><i class="fa-regular fa-pen-to-square"></i></a></li>
-                            <li><a href = "#"><i class="fa-regular fa-trash-can"></i></a></li>
-                        </ul>
                     </div>
-                    <div id = "item-card" title = "Item 3">
-                        <div id = "image"></div>
-                        <div id = "info">
-                            <div id = "name">Name</div>
-                            <div id = "price">30$</div>
-                            <div id = "stats">4.7(201) | 1.1k bought</div>
+                    
+                    <div id="item-card" title="Item 456">
+                        <div id="image"></div>
+                        <div id="info">
+                            <div id="name">High-Performance Red Gadget with Multiple Functions</div>
+                            <div id="price">$49.99</div>
+                            <div id="stats">4.8(220) | 1.5k bought</div>
                         </div>
-                        <ul id = "control">
-                            <li><a href = "#"><i class="fa-regular fa-pen-to-square"></i></a></li>
-                            <li><a href = "#"><i class="fa-regular fa-trash-can"></i></a></li>
-                        </ul>
-                    </div>
-                    <div id = "item-card" title = "Item 4">
-                        <div id = "image"></div>
-                        <div id = "info">
-                            <div id = "name">Name</div>
-                            <div id = "price">30$</div>
-                            <div id = "stats">4.7(201) | 1.1k bought</div>
+                        <div id="control">
+                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="#"><i class="fa-regular fa-trash-can"></i></a>
                         </div>
-                        <ul id = "control">
-                            <li><a href = "#"><i class="fa-regular fa-pen-to-square"></i></a></li>
-                            <li><a href = "#"><i class="fa-regular fa-trash-can"></i></a></li>
-                        </ul>
                     </div>
-                    <div id = "item-card" title = "Item 5">
-                        <div id = "image"></div>
-                        <div id = "info">
-                            <div id = "name">Name</div>
-                            <div id = "price">30$</div>
-                            <div id = "stats">4.7(201) | 1.1k bought</div>
+                    
+                    <div id="item-card" title="Item 789">
+                        <div id="image"></div>
+                        <div id="info">
+                            <div id="name">Eco-Friendly Green Gizmo with Sustainable Materials</div>
+                            <div id="price">$34.99</div>
+                            <div id="stats">4.2(180) | 1.2k bought</div>
                         </div>
-                        <ul id = "control">
-                            <li><a href = "#"><i class="fa-regular fa-pen-to-square"></i></a></li>
-                            <li><a href = "#"><i class="fa-regular fa-trash-can"></i></a></li>
-                        </ul>
-                    </div>
-                    <div id = "item-card" title = "Item 6">
-                        <div id = "image"></div>
-                        <div id = "info">
-                            <div id = "name">Name</div>
-                            <div id = "price">30$</div>
-                            <div id = "stats">4.7(201) | 1.1k bought</div>
+                        <div id="control">
+                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="#"><i class="fa-regular fa-trash-can"></i></a>
                         </div>
-                        <ul id = "control">
-                            <li><a href = "#"><i class="fa-regular fa-pen-to-square"></i></a></li>
-                            <li><a href = "#"><i class="fa-regular fa-trash-can"></i></a></li>
-                        </ul>
                     </div>
+                    
+                    <div id="item-card" title="Item 987">
+                        <div id="image"></div>
+                        <div id="info">
+                            <div id="name">Innovative Yellow Contraption with Cutting-Edge Technology</div>
+                            <div id="price">$42.50</div>
+                            <div id="stats">4.6(200) | 1.3k bought</div>
+                        </div>
+                        <div id="control">
+                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div id="item-card" title="Item 654">
+                        <div id="image"></div>
+                        <div id="info">
+                            <div id="name">Sleek Purple Gadget with Stylish Design and Enhanced Features</div>
+                            <div id="price">$39.99</div>
+                            <div id="stats">4.7(190) | 1.4k bought</div>
+                        </div>
+                        <div id="control">
+                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div id="item-card" title="Item 321">
+                        <div id="image"></div>
+                        <div id="info">
+                            <div id="name">Orange Widget with Extended Battery Life and User-Friendly Interface</div>
+                            <div id="price">$29.99</div>
+                            <div id="stats">4.4(160) | 900 bought</div>
+                        </div>
+                        <div id="control">
+                            <a href="#"><i class="fa-regular fa-pen-to-square"></i></a>
+                            <a href="#"><i class="fa-regular fa-trash-can"></i></a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
 
@@ -136,8 +141,8 @@
                         </ul>
                     </div>
                 </div>
-                <div id = "Trending Items">
-                    <h1>Latest Activities</h1>
+                <div id = "trend-item">
+                    <h1>Trending Items</h1>
                     <div id = "content-board">
                         <ul>
                             <li><p>Hello World</p></li>
