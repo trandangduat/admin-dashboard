@@ -1,7 +1,7 @@
 @import url('reset.css');
 
 :root {
-    --sidebar-width: 18vw;
+    --sidebar-width: 20vw;
     --border-radius: 6px;
     --gradient: linear-gradient(45deg, var(--primary-5), var(--primary));
     --bx-shd: 4px 4px 10px hsla(270, 98%, 37%, 0.05);
@@ -30,7 +30,7 @@
 
 * {
     box-sizing: border-box;
-    transition: 100ms;
+    transition: 50ms;
 }
 
 body {
@@ -134,7 +134,7 @@ h1 {
 
 #header {
     background: var(--neutral-1);
-    padding: 20px 40px;
+    padding: 20px 50px;
     box-shadow: var(--bx-shd);
 }
 
@@ -142,8 +142,7 @@ h1 {
     display: grid;
     grid-template-columns: max-content max-content;
     grid-template-areas: 
-                        "avatar username"
-                        "avatar stats";
+                        "avatar username";
     column-gap: 20px;
     row-gap: 10px;
 }
@@ -166,22 +165,14 @@ h1 {
     margin-left: 0;
     font-weight: bold;
     font-size: 1.75rem;
-    margin-bottom: 0px;
-}
-
-#left-side #stats {
-    margin-top: 0px;
-    grid-area: stats;
-    font-weight: 400;
-}
-
-#left-side #stats b {
-    color: var(--primary);
-}
-
-#left-side #stats > ul {
     display: flex;
-    gap: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#left-side #username #greeting {
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 #right-side {
@@ -278,6 +269,7 @@ h1 {
     padding: 20px;
     border-radius: var(--border-radius);
     box-shadow: var(--bx-shd);
+    line-height: 150%;
 }
 
 #right-panel #content-board ul {
@@ -289,4 +281,54 @@ h1 {
     padding-bottom: 10px;
     margin-bottom: 10px;
     border-bottom: 1px solid var(--neutral-2);
+}
+
+#right-panel a {
+    display: inline-flex;
+    gap: 15px;
+    color: var(--primary-10);
+}
+
+#right-panel a * {
+    margin: auto;
+}
+
+#right-panel a b {
+    color: var(--primary);
+}
+
+#right-panel #content-board span {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--neutral-5);
+}
+
+#trend-item #content-board ul > li {
+    display: flex;
+    gap: 15px;
+}
+
+#content-board ul > li > .ranking {
+    padding: 5px 10px;
+    border-radius: var(--border-radius);
+    background: var(--primary-1);
+    margin: auto 0;
+}
+
+#content-board ul > li:nth-child(1) > .ranking {
+    background-color: var(--primary-8);
+    color: var(--neutral-1);
+    font-weight: bold;
+}
+
+#content-board ul > li:nth-child(2) > .ranking {
+    background-color: var(--primary-7);
+    color: var(--neutral-1);
+    font-weight: bold;
+}
+
+#content-board ul > li:nth-child(3) > .ranking {
+    background-color: var(--primary-6);
+    color: var(--neutral-1);
+    font-weight: bold;
 }

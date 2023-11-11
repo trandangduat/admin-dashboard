@@ -28,14 +28,7 @@
             <div id = "profile">
                 <div id = "left-side">
                     <div id = "avatar"></div>
-                    <div id = "username">Admin (@sillyadmin)</div>
-                    <div id = "stats">
-                        <ul>
-                            <li><b>1.1M</b> Followers</li>
-                            <li><b>400K</b> Bought items</li>
-                            <li><b>200</b> Items</li>
-                        </ul>
-                    </div>
+                    <div id = "username"><div id = "greeting">Hi there,</div> Admin (@sillyadmin)</div>
                 </div>
                 <div id = "right-side">
                     <ul>
@@ -131,26 +124,82 @@
             </div>
 
             <div id = "right-panel">
-                <div id = "latest-act">
+                <div id="latest-act">
                     <h1>Latest Activities</h1>
-                    <div id = "content-board">
+                    <div id="content-board">
                         <ul>
-                            <li><p>Hello World</p></li>
-                            <li><p>Hello World</p></li>
-                            <li><p>Hello World</p></li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-plus"></i>
+                                    <p>Product added: <b>Blue Widget</b> - <span class="timestamp">4 minutes ago</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <p>Order placed for: <b>Red Gadget</b> - <span class="timestamp">10 minutes ago</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-star"></i>
+                                    <p>Product reviewed: <b>Green Gizmo</b> - <span class="timestamp">30 minutes ago</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-box"></i>
+                                    <p>Product restocked: <b>Yellow Contraption</b> - <span class="timestamp">40 minutes ago</span></p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fas fa-percent"></i>
+                                    <p>Special offer on: <b>Purple Gadget</b> - <span class="timestamp">50 minutes ago</span></p>
+                                </a>
+                            </li>
+                            <li style = "border: none; text-align: center; margin: 0;">
+                                <a href = ""><i class="fa-solid fa-chevron-down"></i></a>
+                            </li>
                         </ul>
                     </div>
                 </div>
-                <div id = "trend-item">
+                
+                <div id="trend-item">
                     <h1>Trending Items</h1>
-                    <div id = "content-board">
+                    <div id="content-board">
                         <ul>
-                            <li><p>Hello World</p></li>
-                            <li><p>Hello World</p></li>
-                            <li><p>Hello World</p></li>
+                            <li>
+                                <div class="ranking">1</div>
+                                <p><b>Blue Widget</b> - <span class="order-count">120 orders this month</span></p>
+                            </li>
+                            <li>
+                                <div class="ranking">2</div>
+                                <p><b>Red Gadget</b> - <span class="order-count">90 orders this month</span></p>
+                            </li>
+                            <li>
+                                <div class="ranking">3</div>
+                                <p><b>Green Gizmo</b> - <span class="order-count">80 orders this month</span></p>
+                            </li>
+                            <li>
+                                <div class="ranking">4</div>
+                                <p><b>Yellow Contraption</b> - <span class="order-count">70 orders this month</span></p>
+                            </li>
+                            <li>
+                                <div class="ranking">5</div>
+                                <p><b>Purple Gadget</b> - <span class="order-count">60 orders this month</span></p>
+                            </li>
                         </ul>
                     </div>
                 </div>
+                
+                <style>
+                    .order-count {
+                        display: contents;
+                    }
+                </style>
+                
+                
             </div>
         </div>
     </div>
